@@ -1,0 +1,23 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .navBar ul li {
+    display: inline-block;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+    padding: 5px;
+    background-color: rgba(2, 2, 2, 0.397);
+    border-radius: 5px;
+  }
+  
+  a:-webkit-any-link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    list-style-type: none;
+  }

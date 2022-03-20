@@ -1,0 +1,52 @@
+[
+        {
+            "Mealid": 1,
+            "name": "BreakFast",
+            "Calorie": "High",
+            "Type":[
+                {
+                    "id": 1,
+                  "food": "Sandwitch"
+                },
+                {
+                    "id": 2,
+                  "food": "Fried eggs"
+                }
+            ]
+            },
+        {
+            "Mealid": 2,
+            "name": "Lunch",
+            "Calorie": "High",
+            "Type":[
+                {
+                    
+                    "id": 1,
+                    "food": "Soup"
+                    },
+                    {
+                        "id": 2,
+                      "food": "Pasta"
+                 }
+                
+            ]
+        },
+        {
+            "Mealid": 3,
+            "name": "Dinner",
+            "Calorie": "Low",
+            "Type":[
+                {
+                    "id": 1,
+                  "food": "Spaghati"
+                },
+                {
+                    "id": 2,
+                  "food": "Yorkshire pudding"
+                }
+            ]
+        }
+       
+    
+
+]

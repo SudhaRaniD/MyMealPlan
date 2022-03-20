@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavLink, Routes, Route} from 'react-router-dom';
+import Home from './Home';
+import Monday from './Monday';
+import'./NavBarStyle.css';
 
 function NavBar() {
 
-  const Home = () => <div>Home</div>;
-  const Monday = () => <div>Monday</div>;
-
+  
   return (
     <><nav className="navBar">
       <ul>
