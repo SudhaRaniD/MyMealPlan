@@ -1,0 +1,19 @@
+[{
+    "id": "001",
+    "day": "Monday",
+    "Dinner": [{
+            "Mealid": "001-01",
+            "name": "Spughati"
+            },
+        {
+            "Mealid": "001-02",
+            "name": "Pizza"
+         },
+        {
+            "Mealid": "001-03",
+            "name": "Burger"
+        }
+       
+    ]
+}
+]
