@@ -1,23 +1,32 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, Routes, Route} from 'react-router-dom';
 
 function NavBar() {
-  return (
-    <nav className="navBar">
-        <ul>
-            <li>
-            <NavLink className = {({isActive}) =>(isActive ? 'activeLink' : '')} to="/"> 
-            HomePage
-            </NavLink>
-            </li>
 
-            <li>
-            <NavLink  className = {({isActive}) =>(isActive ? 'activeLink' : '')} to="/Components/Monday">
+  const Home = () => <div>Home</div>;
+  const Monday = () => <div>Monday</div>;
+
+  return (
+    <><nav className="navBar">
+      <ul>
+        <li>
+        <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/">
+            HomePage
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Monday">
             Monday
-            </NavLink>
-            </li>
-        </ul>
-    </nav>
+          </NavLink>
+        </li>
+      </ul>
+    </nav><div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Monday" element={<Monday />} />
+        </Routes>
+      </div></>
   );
 }
 
