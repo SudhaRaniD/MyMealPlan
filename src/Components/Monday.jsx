@@ -1,6 +1,7 @@
 import React from 'react'
 
 import menu from './menu.json';
+import './MenuTable.css';
 
 function Monday() {
  
@@ -36,9 +37,11 @@ function Monday() {
                     return(
                       <div key ={mealtype.mealid}>
                         {mealtype.name} - {mealtype.calorie}
-                        <table>
-                          <th>Item</th>
-                          <th>Add Item</th>
+                        <table id="menuitems">
+                          <tr>
+                            <th>Item</th>
+                            <th>Add Item</th>
+                          </tr>
                         {
                           mealtype.menuitems.map(mealitem =>{
                             return(
