@@ -36,19 +36,20 @@ function Monday() {
                     return(
                       <div key ={mealtype.mealid}>
                         {mealtype.name} - {mealtype.calorie}
+                        <table>
+                          <th>Item</th>
+                          <th>Add Item</th>
                         {
                           mealtype.menuitems.map(mealitem =>{
                             return(
-                              <div key ={mealitem.id}>
-                                {mealitem.food}
-                                <div>
-                                  <button id={mealitem.id} key ={mealitem.id}>Add</button>
-                                </div>
-                              </div>
-                              
+                                <tr>
+                                  <td>{mealitem.food}</td>
+                                  <td><button id="addItem">+</button></td>
+                                </tr>
                             )
                           })
                         }
+                        </table>
                       </div>
                     )
                   })
