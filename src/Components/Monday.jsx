@@ -5,25 +5,22 @@ import './MenuTable.css';
 
 function Monday() {
  
+  const handleChange = (e, week, mealtype, mealitem) => { 
+
+    if (e.target.checked){
+      console.log('The checkbox was toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
+   } else {
+    console.log('The checkbox was un toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
+   }
+  }; 
+
+
   return (
     <div>Monday, Reading menu
       <br/><br/>
-    {/* {
-       menu.map(record => {
-        return(
-          record.week.map(week => { 
-            return(
-          <div className= "box" key={week.weekday}>
-            <strong>{week.weekday}</strong><br/>
-            </div>
-            )
-          })
-        )
-      })
-      
-    } */}
+  
 
-{
+      {
        menu.map(record => {
         return(
           record.week.filter(week => week.weekday === "Monday")
@@ -40,14 +37,17 @@ function Monday() {
                         <table id="menuitems">
                           <tr>
                             <th>Item</th>
-                            <th>Add Item</th>
+                            <th>Select</th>
                           </tr>
                         {
                           mealtype.menuitems.map(mealitem =>{
                             return(
                                 <tr>
+                                  <td id="mealidnone">{mealitem.id}</td>
                                   <td>{mealitem.food}</td>
-                                  <td><button id="addItem">+</button></td>
+                                  <td><input class="form-check-input" type="checkbox" value="" 
+                                      id="flexCheckChecked" onChange={(e) => handleChange(e, week, mealtype, mealitem)}></input></td>
+                                 
                                 </tr>
                             )
                           })

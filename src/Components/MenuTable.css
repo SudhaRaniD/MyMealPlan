@@ -24,3 +24,11 @@
     color: white;
     width: 25px;
   }
+
+  #mealidnone{
+    display:none;
+  }
+
+  #checkboxid{
+    width: 10px;
+  }
