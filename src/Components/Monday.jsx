@@ -1,28 +1,65 @@
 import React from 'react'
 
-import Records from './menu.json';
+import menu from './menu.json';
 
 function Monday() {
  
   return (
     <div>Monday, Reading menu
       <br/><br/>
-    {
-      Records.map(record => {
+    {/* {
+       menu.map(record => {
         return(
-          <div className= "box" key={record.id}>
-            <strong>{record.name}</strong><br/>
-           
-            {record.Type.map(data =>{
-              return(
-                <div key ={record.id}>
-                {data.food}
-                </div>
-              )
-            })}
+          record.week.map(week => { 
+            return(
+          <div className= "box" key={week.weekday}>
+            <strong>{week.weekday}</strong><br/>
             </div>
+            )
+          })
         )
       })
+      
+    } */}
+
+{
+       menu.map(record => {
+        return(
+          record.week.filter(week => week.weekday === "Monday")
+          .map(week => {
+            return (
+              <div className= "box" key={week.weekday}>
+                <strong>{week.weekday}</strong><br/>
+
+                {
+                  week.mealtype.map(mealtype => {
+                    return(
+                      <div key ={mealtype.mealid}>
+                        {mealtype.name} - {mealtype.calorie}
+                        {
+                          mealtype.menuitems.map(mealitem =>{
+                            return(
+                              <div key ={mealitem.id}>
+                                {mealitem.food}
+                                <div>
+                                  <button id={mealitem.id} key ={mealitem.id}>Add</button>
+                                </div>
+                              </div>
+                              
+                            )
+                          })
+                        }
+                      </div>
+                    )
+                  })
+                }
+
+              </div>
+            )
+          })
+        )
+      })
+      
     }
     </div>
   );

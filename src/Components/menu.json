@@ -1,52 +1,56 @@
 [
+  {
+    "week":[
         {
-            "Mealid": 1,
+        "weekday":"Monday",
+        "mealtype":[
+          {
+            "mealid": 1,
             "name": "BreakFast",
-            "Calorie": "High",
-            "Type":[
+            "calorie": "High",
+            "menuitems":[
                 {
-                    "id": 1,
+                  "id": 1,
                   "food": "Sandwitch"
                 },
                 {
-                    "id": 2,
+                  "id": 2,
                   "food": "Fried eggs"
                 }
             ]
-            },
-        {
-            "Mealid": 2,
+          },
+          {
+            "mealid": 2,
             "name": "Lunch",
-            "Calorie": "High",
-            "Type":[
+            "calorie": "High",
+            "menuitems":[
+                {  
+                  "id": 1,
+                  "food": "Soup"
+                },
                 {
-                    
-                    "id": 1,
-                    "food": "Soup"
-                    },
-                    {
-                        "id": 2,
-                      "food": "Pasta"
-                 }
-                
+                      "id": 2,
+                    "food": "Pasta"
+                }
             ]
-        },
-        {
-            "Mealid": 3,
+          },
+          {
+            "mealid": 3,
             "name": "Dinner",
-            "Calorie": "Low",
-            "Type":[
+            "calorie": "Low",
+            "menuitems":[
                 {
-                    "id": 1,
+                  "id": 1,
                   "food": "Spaghati"
                 },
                 {
-                    "id": 2,
+                  "id": 2,
                   "food": "Yorkshire pudding"
                 }
             ]
-        }
-       
-    
-
+          }
+        ]
+      }
+    ]
+  }
 ]
