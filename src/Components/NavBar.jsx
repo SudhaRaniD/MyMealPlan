@@ -12,7 +12,7 @@ function NavBar() {
       <ul>
         <li>
         <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/">
-            HomePage
+            Homepage
           </NavLink>
         </li>
 
