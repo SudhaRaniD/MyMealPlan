@@ -6,7 +6,7 @@ import './MenuTable.css';
 function MealSummary() {
 
   return (
-    <form id="formFriday">
+    <form id="formsummary">
       <div>
         <br/><br/>
         {
