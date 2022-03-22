@@ -3,6 +3,7 @@
     "week":[
         {
         "weekday":"Monday",
+        "weekdate":"",
         "mealtype":[
           {
             "mealid": 1,
@@ -11,11 +12,13 @@
             "menuitems":[
                 {
                   "id": 1,
-                  "food": "Sandwitch"
+                  "food": "Sandwitch",
+                  "menuflag": false
                 },
                 {
                   "id": 2,
-                  "food": "Fried eggs"
+                  "food": "Fried eggs",
+                  "menuflag": false
                 }
             ]
           },
@@ -26,11 +29,13 @@
             "menuitems":[
                 {  
                   "id": 1,
-                  "food": "Soup"
+                  "food": "Soup",
+                  "menuflag": false
                 },
                 {
-                      "id": 2,
-                    "food": "Pasta"
+                    "id": 2,
+                    "food": "Pasta",
+                    "menuflag": false
                 }
             ]
           },
@@ -41,11 +46,241 @@
             "menuitems":[
                 {
                   "id": 1,
-                  "food": "Spaghati"
+                  "food": "Spaghati",
+                  "menuflag": false
                 },
                 {
                   "id": 2,
-                  "food": "Yorkshire pudding"
+                  "food": "Yorkshire pudding",
+                  "menuflag": false
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "weekday":"Tuesday",
+        "weekdate":"",
+        "mealtype":[
+          {
+            "mealid": 1,
+            "name": "BreakFast",
+            "calorie": "High",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Sandwitch",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Oats with Milk",
+                  "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 2,
+            "name": "Lunch",
+            "calorie": "High",
+            "menuitems":[
+                {  
+                  "id": 1,
+                  "food": "Soup",
+                  "menuflag": false
+                },
+                {
+                    "id": 2,
+                    "food": "Fried Rice",
+                    "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 3,
+            "name": "Dinner",
+            "calorie": "Low",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Noodels",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Yorkshire pudding",
+                  "menuflag": false
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "weekday":"Wednesday",
+        "weekdate":"",
+        "mealtype":[
+          {
+            "mealid": 1,
+            "name": "BreakFast",
+            "calorie": "High",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Sandwitch",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Oats with Milk",
+                  "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 2,
+            "name": "Lunch",
+            "calorie": "High",
+            "menuitems":[
+                {  
+                  "id": 1,
+                  "food": "Soup",
+                  "menuflag": false
+                },
+                {
+                    "id": 2,
+                    "food": "Fried Rice",
+                    "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 3,
+            "name": "Dinner",
+            "calorie": "Low",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Noodels",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Yorkshire pudding",
+                  "menuflag": false
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "weekday":"Thursday",
+        "weekdate":"",
+        "mealtype":[
+          {
+            "mealid": 1,
+            "name": "BreakFast",
+            "calorie": "High",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Sandwitch",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Oats with Milk",
+                  "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 2,
+            "name": "Lunch",
+            "calorie": "High",
+            "menuitems":[
+                {  
+                  "id": 1,
+                  "food": "Soup",
+                  "menuflag": false
+                },
+                {
+                    "id": 2,
+                    "food": "Fried Rice",
+                    "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 3,
+            "name": "Dinner",
+            "calorie": "Low",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Noodels",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Yorkshire pudding",
+                  "menuflag": false
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "weekday":"Friday",
+        "weekdate":"",
+        "mealtype":[
+          {
+            "mealid": 1,
+            "name": "BreakFast",
+            "calorie": "High",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Sandwitch",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Oats with Milk",
+                  "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 2,
+            "name": "Lunch",
+            "calorie": "High",
+            "menuitems":[
+                {  
+                  "id": 1,
+                  "food": "Soup",
+                  "menuflag": false
+                },
+                {
+                    "id": 2,
+                    "food": "Fried Rice",
+                    "menuflag": false
+                }
+            ]
+          },
+          {
+            "mealid": 3,
+            "name": "Dinner",
+            "calorie": "Low",
+            "menuitems":[
+                {
+                  "id": 1,
+                  "food": "Noodels",
+                  "menuflag": false
+                },
+                {
+                  "id": 2,
+                  "food": "Yorkshire pudding",
+                  "menuflag": false
                 }
             ]
           }

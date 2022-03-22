@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import menu from './menu.json';
 import './MenuTable.css';
 
-function Monday() {
-
+function Wednesday() {
  
   const handleChange = (e, week, mealtype, mealitem) => {
-    if (e.target.checked) {
+    if (e.target.checked){
       mealitem.menuflag = true;
       console.log('The checkbox was toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
     } else {
@@ -24,20 +23,18 @@ function Monday() {
     //   retrievedObject = localStorage.getItem('menu');
     // }
     // console.log('retrievedObject: ', JSON.parse(retrievedObject));
-    ReactDOM.render(<Monday />, document.getElementById('formMonday'));
+    ReactDOM.render(<Wednesday />, document.getElementById('formWednesday'));
   }; 
 
 
   return (
-    <form id="formMonday">
-      <div>Monday, Reading menu
+    <form id="formWednesday">
+      <div>Wednesday, Reading menu
         <br/><br/>
-    
-
         {
         menu.map(record => {
           return(
-            record.week.filter(week => week.weekday === "Monday")
+            record.week.filter(week => week.weekday === "Wednesday")
             .map(week => {
               return (
                 <div className= "box" key={week.weekday}>
@@ -88,4 +85,4 @@ function Monday() {
   );
 }
 
-export default Monday;
+export default Wednesday;

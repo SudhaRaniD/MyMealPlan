@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import menu from './menu.json';
 import './MenuTable.css';
 
-function Monday() {
+function Friday() {
 
  
   const handleChange = (e, week, mealtype, mealitem) => {
@@ -24,20 +24,20 @@ function Monday() {
     //   retrievedObject = localStorage.getItem('menu');
     // }
     // console.log('retrievedObject: ', JSON.parse(retrievedObject));
-    ReactDOM.render(<Monday />, document.getElementById('formMonday'));
+    ReactDOM.render(<Friday />, document.getElementById('formFriday'));
   }; 
 
 
   return (
-    <form id="formMonday">
-      <div>Monday, Reading menu
+    <form id="formFriday">
+      <div>Friday, Reading menu
         <br/><br/>
     
 
         {
         menu.map(record => {
           return(
-            record.week.filter(week => week.weekday === "Monday")
+            record.week.filter(week => week.weekday === "Friday")
             .map(week => {
               return (
                 <div className= "box" key={week.weekday}>
@@ -88,4 +88,4 @@ function Monday() {
   );
 }
 
-export default Monday;
+export default Friday;

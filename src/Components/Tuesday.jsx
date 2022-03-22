@@ -2,18 +2,29 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import menu from './menu.json';
 import './MenuTable.css';
+import dateFormat from 'dateformat';
 
-function Monday() {
-
+function Tuesday() {
  
   const handleChange = (e, week, mealtype, mealitem) => {
-    if (e.target.checked) {
+    if (e.target.checked){
       mealitem.menuflag = true;
       console.log('The checkbox was toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
     } else {
       console.log('The checkbox was un toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
       mealitem.menuflag = false;
     }
+
+    var curr = new Date();
+    // var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
+    // var lastday = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+    var d = new Date(curr);
+    var day = d.getDay();
+    console.log("current date : " + d);
+    console.log("current day : " + day);
+    var diff = d.getDate() - 1;
+    var newdate = new Date(d.setDate(diff));
+    console.log("current diff : " + dateFormat(newdate,"dd/mm/yyyy"));
     
     // var retrievedObject = localStorage.getItem('menu');
     // if (retrievedObject === undefined ) {
@@ -24,20 +35,18 @@ function Monday() {
     //   retrievedObject = localStorage.getItem('menu');
     // }
     // console.log('retrievedObject: ', JSON.parse(retrievedObject));
-    ReactDOM.render(<Monday />, document.getElementById('formMonday'));
+    ReactDOM.render(<Tuesday />, document.getElementById('formTuesday'));
   }; 
 
 
   return (
-    <form id="formMonday">
-      <div>Monday, Reading menu
+    <form id="formTuesday">
+      <div>Tuesday, Reading menu
         <br/><br/>
-    
-
         {
         menu.map(record => {
           return(
-            record.week.filter(week => week.weekday === "Monday")
+            record.week.filter(week => week.weekday === "Tuesday")
             .map(week => {
               return (
                 <div className= "box" key={week.weekday}>
@@ -88,4 +97,4 @@ function Monday() {
   );
 }
 
-export default Monday;
+export default Tuesday;
