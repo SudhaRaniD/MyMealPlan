@@ -15,16 +15,14 @@ function Tuesday() {
       mealitem.menuflag = false;
     }
 
-    var curr = new Date();
-    // var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
-    // var lastday = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
-    var d = new Date(curr);
-    var day = d.getDay();
-    console.log("current date : " + d);
-    console.log("current day : " + day);
-    var diff = d.getDate() - 1;
-    var newdate = new Date(d.setDate(diff));
-    console.log("current diff : " + dateFormat(newdate,"dd/mm/yyyy"));
+    // var curr = new Date();
+    // var d = new Date(curr);
+    // var day = d.getDay();
+    // console.log("current date : " + d);
+    // console.log("current day : " + day);
+    // var diff = d.getDate() - 1;
+    // var newdate = new Date(d.setDate(diff));
+    // console.log("current diff : " + dateFormat(newdate,"dd/mm/yyyy"));
     
     // var retrievedObject = localStorage.getItem('menu');
     // if (retrievedObject === undefined ) {
@@ -41,7 +39,7 @@ function Tuesday() {
 
   return (
     <form id="formTuesday">
-      <div>Tuesday, Reading menu
+      <div>
         <br/><br/>
         {
         menu.map(record => {
@@ -50,7 +48,7 @@ function Tuesday() {
             .map(week => {
               return (
                 <div className= "box" key={week.weekday}>
-                  <strong>{week.weekday}</strong><br/>
+                  <strong>{week.weekday} - {week.weekdate}</strong><br/>
 
                   {
                     week.mealtype.map(mealtype => {

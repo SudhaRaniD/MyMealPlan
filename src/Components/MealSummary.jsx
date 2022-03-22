@@ -3,45 +3,20 @@ import ReactDOM from 'react-dom';
 import menu from './menu.json';
 import './MenuTable.css';
 
-function Thursday() {
- 
-  const handleChange = (e, week, mealtype, mealitem) => {
-    if (e.target.checked){
-      mealitem.menuflag = true;
-      console.log('The checkbox was toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
-    } else {
-      console.log('The checkbox was un toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
-      mealitem.menuflag = false;
-    }
-    
-    // var retrievedObject = localStorage.getItem('menu');
-    // if (retrievedObject === undefined ) {
-    //   localStorage.setItem("menu", JSON.stringify(menu));
-    // } else {
-    //   var mergedObj = {...retrievedObject, ...menu}
-    //   localStorage.setItem("menu", JSON.stringify(mergedObj));
-    //   retrievedObject = localStorage.getItem('menu');
-    // }
-    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
-    ReactDOM.render(<Thursday />, document.getElementById('formThursday'));
-  }; 
-
+function MealSummary() {
 
   return (
-    <form id="formThursday">
+    <form id="formFriday">
       <div>
         <br/><br/>
-    
-
         {
         menu.map(record => {
           return(
-            record.week.filter(week => week.weekday === "Thursday")
+            record.week.filter(week => week.weekday !== "")
             .map(week => {
               return (
                 <div className= "box" key={week.weekday}>
                   <strong>{week.weekday} - {week.weekdate}</strong><br/>
-
                   {
                     week.mealtype.map(mealtype => {
                       return(
@@ -51,19 +26,17 @@ function Thursday() {
                             <thead>
                               <tr>
                                 <th>Item</th>
-                                <th>Select</th>
                               </tr>
                             </thead>
                           {
-                            mealtype.menuitems.map(mealitem =>{
+                            mealtype.menuitems.filter(mealitems => mealitems.menuflag === true)
+                            .map(mealitem =>{
                               return(
                                 <tbody>
                                   <tr>
                                     <td id="mealidnone">{mealitem.id}</td>
                                     <td>{mealitem.food}</td>
-                                    <td><input className="form-check-input" type="checkbox" value={mealitem.menuflag} checked={mealitem.menuflag}
-                                        id="flexCheckChecked" onChange={(e) => handleChange(e, week, mealtype, mealitem)}></input>
-                                    </td>
+                                   
                                   </tr>
                                 </tbody>
                               )
@@ -87,4 +60,4 @@ function Thursday() {
   );
 }
 
-export default Thursday;
+export default MealSummary;

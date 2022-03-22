@@ -6,6 +6,7 @@ import Tuesday from './Tuesday';
 import Wednesday from './Wednesday';
 import Thursday from './Thursday';
 import Friday from './Friday';
+import MealSummary from './MealSummary';
 import'./NavBarStyle.css';
 
 function NavBar() {
@@ -42,6 +43,11 @@ function NavBar() {
             Friday
           </NavLink>
         </li>
+        <li>
+          <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/MealSummary" >
+            Meal Summary
+          </NavLink>
+        </li>
       </ul>
     </nav><div>
         <Routes>
@@ -51,6 +57,7 @@ function NavBar() {
           <Route path="/Wednesday" element={<Wednesday />} />
           <Route path="/Thursday" element={<Thursday />} />
           <Route path="/Friday" element={<Friday />} />
+          <Route path="/MealSummary" element={<MealSummary />} />
         </Routes>
       </div></>
   );

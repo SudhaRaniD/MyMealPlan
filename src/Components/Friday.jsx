@@ -30,10 +30,8 @@ function Friday() {
 
   return (
     <form id="formFriday">
-      <div>Friday, Reading menu
+      <div>
         <br/><br/>
-    
-
         {
         menu.map(record => {
           return(
@@ -41,8 +39,7 @@ function Friday() {
             .map(week => {
               return (
                 <div className= "box" key={week.weekday}>
-                  <strong>{week.weekday}</strong><br/>
-
+                  <strong>{week.weekday} - {week.weekdate}</strong><br/>
                   {
                     week.mealtype.map(mealtype => {
                       return(
