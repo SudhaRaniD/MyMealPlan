@@ -5,7 +5,6 @@ import './MenuTable.css';
 
 function Monday() {
 
- 
   const handleChange = (e, week, mealtype, mealitem) => {
     if (e.target.checked) {
       mealitem.menuflag = true;
@@ -14,23 +13,17 @@ function Monday() {
       console.log('The checkbox was un toggled ' + week.weekday + "----" + mealtype.name + "----" + mealitem.food); 
       mealitem.menuflag = false;
     }
-    
-    // var retrievedObject = localStorage.getItem('menu');
-    // if (retrievedObject === undefined ) {
-    //   localStorage.setItem("menu", JSON.stringify(menu));
-    // } else {
-    //   var mergedObj = {...retrievedObject, ...menu}
-    //   localStorage.setItem("menu", JSON.stringify(mergedObj));
-    //   retrievedObject = localStorage.getItem('menu');
-    // }
-    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
     ReactDOM.render(<Monday />, document.getElementById('formMonday'));
-  }; 
+  };
 
 
   return (
     <form id="formMonday">
       <div>
+
+        <input type="text" />
+
         <br/><br/>
         {
         menu.map(record => {
@@ -40,12 +33,11 @@ function Monday() {
               return (
                 <div className= "box" key={week.weekday}>
                   <strong>{week.weekday} - {week.weekdate}</strong><br/>
-
                   {
                     week.mealtype.map(mealtype => {
                       return(
                         <div key={mealtype.mealid}>
-                          {mealtype.name} - {mealtype.calorie}
+                          {mealtype.name}   
                           <table id="menuitems">
                             <thead>
                               <tr>
