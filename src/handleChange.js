@@ -11,8 +11,6 @@ export const handleChange = (menu) => {
   var friday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 5)).toUTCString();
   console.log(dateFormat(monday, "dd/mm/yyyy"), dateFormat(tuesday, "dd/mm/yyyy"), dateFormat(wednesday, "dd/mm/yyyy"), dateFormat(thursday, "dd/mm/yyyy"), dateFormat(friday, "dd/mm/yyyy"));
 
-
-
   menu.map(record => {
     return (
       record.week.filter(week => week.weekday === "Monday")

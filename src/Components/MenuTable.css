@@ -32,3 +32,13 @@
   #checkboxid{
     width: 10px;
   }
+
+.float-container {
+    
+    padding: 5px;
+}
+
+.float-child {
+    float: left;
+    padding: 5px;
+}  
